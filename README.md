@@ -31,4 +31,5 @@ Each file have 300000 rows of data
 
 ### Credits
 
-Udacity team
+- Udacity team
+- Github
