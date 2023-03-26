@@ -221,6 +221,7 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
+    print('Thanks for using our program!')
 
 if __name__ == "__main__":
 	main()
