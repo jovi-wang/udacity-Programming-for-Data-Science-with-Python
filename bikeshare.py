@@ -181,6 +181,8 @@ def user_stats(df):
     if 'Gender' in df:
         # Display counts of gender
         print('counts of gender', df['Gender'].value_counts())
+    else:
+        print('Gender data is not available for this city.')
     if 'Birth Year' in df:
         # Display earliest, most recent, and most common year of birth
         print('the earliest year of birth:', df['Birth Year'].min())
@@ -188,6 +190,8 @@ def user_stats(df):
         print('the most recent year of birth:', df['Birth Year'].max())
         
         print('the most common year of birth:', df['Birth Year'].mode()[0])
+    else:
+        print('Birth Year data is not available for this city.')
 
 
     print("\nThis took %s seconds." % (time.time() - start_time))
@@ -201,8 +205,8 @@ def display_data(df):
         print(df.iloc[start_loc:start_loc+5])
         start_loc += 5
         view_data = input("Do you wish to continue?: ").lower()
-   
-        
+
+
 def main():
     while True:
         city, month, day = get_filters()
@@ -217,7 +221,6 @@ def main():
         restart = input('\nWould you like to restart? Enter yes or no.\n')
         if restart.lower() != 'yes':
             break
-
 
 if __name__ == "__main__":
 	main()
